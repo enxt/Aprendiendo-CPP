@@ -12,10 +12,11 @@
 
 La estructura del programa principal en C++ es la siguiente:
 
-_directivas del preprocesador: comienzan por # _
-_declaración de importaciones (directivas #include)_
-_definición de constantes _
+_directivas del preprocesador: comienzan por #_<br>
+_declaración de importaciones (directivas #include)_<br>
+_definición de constantes_<br>
 _definición de tipos_
+
 
 ```cpp
 int main(parámetros) // cabecera de la función principal
