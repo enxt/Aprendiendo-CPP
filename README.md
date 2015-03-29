@@ -1,3 +1,3 @@
-# Learn-CPP
+# Aprendiendo C++
 
-Lecciones y ejercicios de curso C++
+Lecciones, ejercicios y otras cosillas mientras aprendo C++
