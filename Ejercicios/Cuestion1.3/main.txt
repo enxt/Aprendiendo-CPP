@@ -1,0 +1,10 @@
+float* fpunt;
+fpunt = &numero1;
+cout << *fpunt << endl;
+numero2 = *fpunt;
+cout << numero2 << endl;
+cout << &numero1 << endl;
+cout << fpunt << endl;
+ptr = &s1[0];
+cout << ptr[5] << endl;
+ptr = &s1[10];
