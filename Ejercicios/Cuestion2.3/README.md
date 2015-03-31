@@ -2,13 +2,16 @@ En este ejercicio haremos uso de la herencia. Creamos una clase CArticulo,
 que será la clase base a partir de la que derivaremos las demas, y que usaremos para representar artículos informáticos.
 A partir de CArticulo, derivaremos COrdenador y CAccesorio. A partir de COrdenador derivamos CPortatil.
 La jerarquía queda de la siguiente forma:
-CArticulo
-COrdenador
-CPortatil
+
+* CArticulo
+    * COrdenador
+        * CPortatil
 
 La clase base CArticulo tiene los atributos protected:
+
 - unidades(entero),
 - precio(double).
+
 Y los siguientes métodos:
 - Un constructor con los valores de inicializacion de los datos.
 - Un método VisualizarFicha que saca los datos por consola.

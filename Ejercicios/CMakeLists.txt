@@ -4,3 +4,4 @@ add_subdirectory(Cuestion1.1)
 
 add_subdirectory(Cuestion2.2)
 add_subdirectory(Cuestion2.3)
+add_subdirectory(Cuestion2.4)

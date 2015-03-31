@@ -12,3 +12,7 @@ void COrdenador::VisualizarFicha() {
     cout << "Precio: " << precio << endl;
     cout << "CPU: " << cpu << endl;
 }
+
+string COrdenador::nombre() {
+    return "Ordenador";
+}

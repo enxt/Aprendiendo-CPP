@@ -4,9 +4,9 @@
 using namespace std;
 
 VecRect::VecRect(int valor) {
-    cout << "Deberia crear " << valor << " rectangulos" << endl;
+
     if(valor > 20) {
-        std::cerr << "No se pudo crear los rectangulos.\nSaliendo." << endl;
+        std::cerr << "No se pudo crear los rectángulos.\nSaliendo." << endl;
         total = 0;
     }
     else {

@@ -1,170 +1,104 @@
-##Programación Orientada a Objetos en C++.
+##1.- Programación Orientada a Objetos en C++.
 
-#### Programación Orientada a Objetos en C++
+####1.1.- Programación Orientada a Objetos en C++
 
-A medida que las aplicaciones se van haciendo más complejas, el mantenimiento 
-del código se hace más difícil, aunque esté correctamente estructurado en 
-funciones y dividido en múltiples módulos. Siguiendo el modelo clásico de
-programación estructurada, nuestro programa puede llegar a presentar decenas o 
-centenas de funciones, cada una de las cuales necesita ciertos parámetros para su 
-funcionamiento. En esta situación no es extraño llamar a veces a la función correcta 
-con parámetros que no lo son o viceversa, como tampoco lo es que ciertas acciones 
-se diferencien de otras sólo en pequeños detalles y, sin embargo, nos veamos 
-forzados a escribir nuevos grupos de funciones. Muchos de estos problemas se 
-solucionan con la denominada Programación Orientada a Objetos (POO). Es una 
-evolución de los lenguajes estructurados en una búsqueda de simplificación del 
-mantenimiento del código y de mayores posibilidades de utilización. La POO 
-introduce una nueva forma de abordar la programación en la que los datos están 
-asociados de forma indisoluble a su forma de manipularlos.
-Permite además ocultar la representación interna del dato, facilitando así el
-objetivo de la reutilización del software.
+A medida que las aplicaciones se van haciendo más complejas, el mantenimiento del código se hace más difícil, aunque esté correctamente estructurado en funciones y dividido en múltiples módulos. Siguiendo el modelo clásico de programación estructurada, nuestro programa puede llegar a presentar decenas o centenas de funciones, cada una de las cuales necesita ciertos parámetros para su funcionamiento. En esta situación no es extraño llamar a veces a la función correcta con parámetros que no lo son o viceversa, como tampoco lo es que ciertas acciones se diferencien de otras sólo en pequeños detalles y, sin embargo, nos veamos forzados a escribir nuevos grupos de funciones. Muchos de estos problemas se
+solucionan con la denominada Programación Orientada a Objetos (POO). Es una evolución de los lenguajes estructurados en una búsqueda de simplificación del mantenimiento del código y de mayores posibilidades de utilización. La POO introduce una nueva forma de abordar la programación en la que los datos están asociados de forma indisoluble a su forma de manipularlos.
+Permite además ocultar la representación interna del dato, facilitando así el objetivo de la reutilización del software.
 
-#### Conceptos básicos de la POO
+####1.2.- Conceptos básicos de la POO
 
 Existe una terminología específica para POO que comenzaremos estudiando:
 
 **Encapsulación**
 Consiste en combinar los datos y su manipulación en una única entidad.
-Es propia de los Objetos y de los TAD (Tipos Abstractos de Datos). Partiendo de un 
-diseño correcto de los tipos de objetos, los datos que se declaren en el interior del 
-objeto sólo serán manipulados por los métodos de ese objeto y, recíprocamente, 
-los métodos del objeto estarán especializados en la manipulación de los datos de 
-esa clase. En cierto modo se aisla a los datos y métodos de un objeto como si se 
-tratase de una cápsula, impidiendo que se usen parámetros erróneos al llamar a un 
-método, o que se modifique erróneamente el valor de un dato. La encapsulación 
-es uno de los pilares de la POO que facilita en mantenimiento de código, ya que 
-usando la definición de un objeto y sus métodos podemos estar seguros de que 
-forman una unidad independiente del resto de la aplicación.
+Es propia de los Objetos y de los TAD (Tipos Abstractos de Datos). Partiendo de un diseño correcto de los tipos de objetos, los datos que se declaren en el interior del objeto sólo serán manipulados por los métodos de ese objeto y, recíprocamente, los métodos del objeto estarán especializados en la manipulación de los datos de esa clase. En cierto modo se aisla a los datos y métodos de un objeto como si se tratase de una cápsula, impidiendo que se usen parámetros erróneos al llamar a un método, o que se modifique erróneamente el valor de un dato. La encapsulación es uno de los pilares de la POO que facilita en mantenimiento de código, ya que usando la definición de un objeto y sus métodos podemos estar seguros de que forman una unidad independiente del resto de la aplicación.
 
 **Clase**
-Es una estructura o plantilla que representa a cualquier concepto o abstracción. Esta 
-estructura agrupa tanto variables, que constituyen los campos o atributos de la 
-clase, como procedimientos y funciones, que se denominan métodos. A los 
-elementos de una clase se les denomina genéricamente miembros.
+Es una estructura o plantilla que representa a cualquier concepto o abstracción. Esta estructura agrupa tanto variables, que constituyen los campos o atributos de la clase, como procedimientos y funciones, que se denominan métodos. A los elementos de una clase se les denomina genéricamente miembros.
 
 **Objetos**
-Un objeto es una instancia o ejemplar de una clase. Es decir, un objeto representa 
-a un elemento particular de una cierta clase. Puede decirse que el objeto es a la 
-clase como la variable es al tipo. Sin embargo, no debemos confundir a los objetos 
-con las variables, ya que mientras las variables son estáticas, los objetos son 
-dinámicos y se crean y destruyen durante la ejecución.
+Un objeto es una instancia o ejemplar de una clase. Es decir, un objeto representa a un elemento particular de una cierta clase. Puede decirse que el objeto es a la clase como la variable es al tipo. Sin embargo, no debemos confundir a los objetos con las variables, ya que mientras las variables son estáticas, los objetos son dinámicos y se crean y destruyen durante la ejecución.
 
 **Herencia**
-Es la capacidad de construir clases a partir de otras, expresando solamente las 
-diferencia de ésta en relación a aquellas. La herencia da una gran potencia a la POO 
-ya que permite reutilizar al máximo las clases ya definidas. Las clases, a partir de 
-las cuales se construyen las nuevas, se denominan clases padre o **clases de base**, 
-mientras que la nueva clase se denomina **clase derivada**. La relación de clase padre 
-entre las clases establece una j**erarquía de clases**.
+Es la capacidad de construir clases a partir de otras, expresando solamente las diferencia de ésta en relación a aquellas. La herencia da una gran potencia a la POO ya que permite reutilizar al máximo las clases ya definidas. Las clases, a partir de las cuales se construyen las nuevas, se denominan clases padre o **clases de base**, mientras que la nueva clase se denomina **clase derivada**. La relación de clase padre entre las clases establece una **jerarquía de clases**.
 
-Existen dos formas comunes de herencia: **la herencia simple y la herencia **
-**múltiple**. En la herencia simple se hereda de una sola clase base.
-Esto significa que declaramos una clase en relación a otra, que a su vez
-puede ser declarada en relación a otra, etc.
-La herencia múltiple permite heredar de varias clases, es decir, que
-podemos declarar una nueva clase a partir de varias clases al mismo
-tiempo. La clase derivada es entonces un caso particular de cada una
-de las clases base.
+Existen dos formas comunes de herencia: **la herencia simple y la herencia múltiple**. En la herencia simple se hereda de una sola clase base. Esto significa que declaramos una clase en relación a otra, que a su vez puede ser declarada en relación a otra, etc.
+La herencia múltiple permite heredar de varias clases, es decir, que podemos declarar una nueva clase a partir de varias clases al mismo tiempo. La clase derivada es entonces un caso particular de cada una de las clases base.
 
 **Polimorfismo**
-Es la posibilidad de considerar una instancia de una clase también como
-una instancia de las clases de base de dicha clase.
+Es la posibilidad de considerar una instancia de una clase también como una instancia de las clases de base de dicha clase.
 
 **Niveles de Confidencialidad**
-Los elementos de una clase, tanto datos como métodos, pueden protegerse del 
-acceso indiscriminado desde otros módulos o programas, de manera que contamos 
-con recursos para especificar que algunos de ellos no son accesibles o que lo son 
-sólo por ciertas clases. Los lenguajes orientados a objetos implementan 
-generalmente tres niveles de encapsulación:
-```1. Privado```
+Los elementos de una clase, tanto datos como métodos, pueden protegerse del acceso indiscriminado desde otros módulos o programas, de manera que contamos con recursos para especificar que algunos de ellos no son accesibles o que lo son sólo por ciertas clases. Los lenguajes orientados a objetos implementan generalmente tres niveles de encapsulación:
+
+1. Privado
 Estas declaraciones sólo son accesibles al propio objeto.
-```2. Público```
+2. Público
 Otros programas o módulos pueden acceder a ellos.
-```3. Protegido```
-Están en un punto intermedio entre los otros dos niveles, y se trata de elementos 
-que sólo son accesibles por el propio objeto y por objetos de clases derivadas de la 
-del objeto.
+3. Protegido
+Están en un punto intermedio entre los otros dos niveles, y se trata de elementos que sólo son accesibles por el propio objeto y por objetos de clases derivadas de la del objeto.
 
 
+##2.- Clases y objetos.
 
+####2.- Estructura de una clase en C++
 
-##Clases y objetos.
-
-#### Estructura de una clase en C++
-C++ es un lenguaje totalmente orientado a objetos, seguramente el más utilizado, 
-contando con todos los elementos típicos de un lenguaje orientado a objetos, como 
-la encapsulación, la herencia y el polimorfismo.
+C++ es un lenguaje totalmente orientado a objetos, seguramente el más utilizado, contando con todos los elementos típicos de un lenguaje orientado a objetos, como la encapsulación, la herencia y el polimorfismo.
 
 La **estructura general** de una declaración de clase tiene la siguiente forma:
-```class nombre clase {```
-
 ```cpp
-	public:	
-		{Variables y métodos con nivel de protección "public"}		
-	protected:	
-		{Variables y métodos con nivel de protección "protected"}		
-	private:	
-		{Variables y métodos con nivel de protección "private"}		
+class nombre clase {
+	public:
+		{Variables y métodos con nivel de protección "public"}
+	protected:
+		{Variables y métodos con nivel de protección "protected"}
+	private:
+		{Variables y métodos con nivel de protección "private"}
+};
 ```
-```};```
 
-Las variables de la parte **public** están a disposición de otros procedimientos, es 
-decir, forman la interfaz del objeto a la que se puede acceder desde otras partes 
-del programa. La interfaz de un objeto debe mantenerse siempre lo más pequeño
-posible para no permitir manipulaciones innecesarias. Las partes de un objeto que 
-no deben ser manipuladas desde el exterior deben escribirse en el bloque de 
-declaraciones **private**. El nivel de protección **protected** tiene básicamente el 
-mismo comportamiento mientras no se utilice ninguna herencia. Sin embargo los 
-elementos declarados **private** no pueden accederse desde clases derivadas, 
-únicamente desde la propia clase, mientras que los **protected** si pueden ser 
-accedidos.
+Las variables de la parte **public** están a disposición de otros procedimientos, es decir, forman la interfaz del objeto a la que se puede acceder desde otras partes del programa. La interfaz de un objeto debe mantenerse siempre lo más pequeño posible para no permitir manipulaciones innecesarias. Las partes de un objeto que no deben ser manipuladas desde el exterior deben escribirse en el bloque de declaraciones **private**. El nivel de protección **protected** tiene básicamente el mismo comportamiento mientras no se utilice ninguna herencia. Sin embargo los elementos declarados **private** no pueden accederse desde clases derivadas, únicamente desde la propia clase, mientras que los **protected** si pueden ser accedidos.
+
 **Ejemplo:**
-_class TCirculo {_
-```cpp
-	public:	
-		void AsignarDatos(int intX, int intY, int intRadio);		
-		void Mostrar();		
-```
-__
-```cpp
-	private:	
-```
 
 ```cpp
-	int x,y, radio; /*estas variables no son manipulables	
+class TCirculo {
+
+	public:
+		void AsignarDatos(int intX, int intY, int intRadio);
+		void Mostrar();
+	private:
+		int x,y, radio; /*estas variables no son manipulables
+					     solo los metodos AsignarDatos y Mostrar pueden
+					     acceder a ellas */
+};
 ```
+
+####1.3.- Uso de un Objeto
+
+Lo primero que necesitamos es declarar una variable del tipo de la clase, igual que haríamos con cualquier otra variable. También podemos declarar un puntero a dicha clase, en cuyo caso será necesario crear el objeto mediante el operador **new**.
+Una vez que se ha creado una instancia del objeto por cualquiera de los dos métodos anteriores, podemos acceder a sus miembros, manipulando las variables o llamando a los métodos. El acceso se realiza con el nombre del objeto, seguido de 
+un punto y el nombre del método o el atributo. La manipulación directa de las variables privadas provocaría un error al compilar.
 
 ```cpp
-	solo los metodos AsignarDatos y Mostrar pueden	
+circulopeque.x = 50; // ERROR_
 ```
+Deben accederse mediante lo métodos públicos:
 
+**Ejemplo:**
 ```cpp
-	acceder a ellas */	
+TCirculo circulopeque, *circulogrande;
+circulogrande = new TCirculo;
+circulopeque.AsignarDatos( 50, 50, 30);
+circulogrande->AsignarDatos( 100, 100, 80);
 ```
-_};_#### Uso de un Objeto
-Lo primero que necesitamos es declarar una variable del tipo de la clase, igual que 
-haríamos con cualquier otra variable. También podemos declarar un puntero a dicha 
-clase, en cuyo caso será necesario crear el objeto mediante el operador **new**.
-Una vez que se ha creado una instancia del objeto por cualquiera de los dos 
-métodos anteriores, podemos acceder a sus miembros, manipulando las variables o 
-llamando a los métodos. El acceso se realiza con el nombre del objeto, seguido de 
-un punto y el nombre del método o el atributo. La manipulación directa de las 
-variables privadas provocaría un error al compilar.
 
-_circulopeque.x = 50; // ERROR_
-_Deben accederse mediante lo métodos públicos:_
-_Ejemplo:__TCirculo circulopeque, *circulogrande;_
-_circulogrande = new TCirculo;_
-_circulopeque.AsignarDatos( 50, 50, 30);_
-_circulogrande->AsignarDatos( 100, 100, 80);_
-
-Observese que al ser _circulopeque_ declarado como una variable, sus métodos se 
-acceden con .metodo, mientras que en _circulogrande_, al ser un puntero, sus 
-métodos se acceden con ->metodo.
+Observese que al ser _circulopeque_ declarado como una variable, sus métodos se acceden con .metodo, mientras que en _circulogrande_, al ser un puntero, sus métodos se acceden con ->metodo.
 
 
 
-##Las clases como tipo de datos.
+##3.- Las clases como tipo de datos.
 
 #### 
 

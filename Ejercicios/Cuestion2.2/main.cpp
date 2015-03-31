@@ -13,7 +13,7 @@ int main(int argc, char * argv[]) {
     
     if(vr->getTotal() == 0) return 1;
     
-    cout << "Introduzca el indice del rectangulo que desee modificar: " << endl;
+    cout << "Introduzca el índice del rectángulo que desee modificar: " << endl;
     cin >> index;
     cin.get(c);
     
@@ -29,10 +29,12 @@ int main(int argc, char * argv[]) {
         vr->asignaDatos(index, alto, ancho);
     }
     
-    cout << "Tengo: " << vr->getTotal() << " rectangulos" << endl;
+    cout << "Tengo: " << vr->getTotal() << " rectángulos" << endl;
     for(int i = 0; i < vr->getTotal(); i++) {
         vr->presentaDatos(i);
     }
+
+    delete vr;
     
     return 0;
 }
