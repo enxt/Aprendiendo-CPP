@@ -19,6 +19,8 @@ int main(int argc, char * argv[]) {
     portatil->VisualizarFicha();
 
     delete articulo;
+    delete ordenador;
+    delete portatil;
 
     return 0;
 }

@@ -56,8 +56,8 @@ int main(int argc, char* argv[])
 
 **Instrucciones compuestas:** { . . . }
 
- { Inst1; Inst2; ...} 
- 
+ { Inst1; Inst2; ...}
+
 **Nombres de los identificadores:**
 
 Se distingue entre mayúsculas y minúsculas: ```Dato``` es distinto de ```dato```.
@@ -99,7 +99,8 @@ Los modificadores condicionan el rango de valores que puede tomar una variable d
 * long double: 1.7E-308 a 1.7E+308
 
 ####2.3.-Declaración de Variables:
-```[modificadores] tipo lista variables;```
+
+**_[modificadores]_ tipo lista variables;**
 
 lista variables es uno o más identificadores separados por comas.
 
@@ -189,7 +190,7 @@ int HorasAbril = DiasMes[Abr] * HorasDia;
 ```
 
 
-####2.8.-Estructuras
+####2.8.- Tipos de Datos Estructurados: Estructuras
 
 ```cpp
 struct nombre tipo {
@@ -202,8 +203,8 @@ struct nombre tipo {
 **Ejemplos**
 ```cpp
 struct tdireccion {
-	 string calle;	
-	 int numero;	
+	 string calle;
+	 int numero;
 };
 
 tdireccion dir1;
@@ -218,11 +219,19 @@ nueva.numero = 20;
 ...
 ```
 ####2.9.-Arrays
-_tipo nombre[tamañoN]...[tamaño1];_
+_tipo nombre[tamañoN]...[tamaño1];
 
 **Ejemplos:**
 ```cpp
-char nombre[20];_
+char nombre[20];
+...
+nombre[3] = 'a';
+int matriz[4][2] = {1, 1 , 2, 4, 3, 9, 4, 16};
+// matriz[0][0] = 1
+// matriz[0][1] = 1
+// matriz[1][0] = 2
+// matriz[1][1] = 4
+// ...
 ```
 
 
@@ -233,8 +242,8 @@ char nombre[20];_
 **Estructura de una función:**
 ```cpp
 tipo nombre ( lista de parámetros )
-{ 
-	(secuencia de instrucciones)	
+{
+	(secuencia de instrucciones)
 	return valor devuelto;
 }
 ```
@@ -249,7 +258,7 @@ void espera (int segundos)
 ```cpp
 void Cuadrado (int Factor, int &Resultado)
 {
-	Resultado = Factor * Factor;	
+	Resultado = Factor * Factor;
 
 }
 ···
@@ -275,24 +284,25 @@ N = Cuadrado(8);
 
 **Asignación**
 
- variable = expresión;
+```variable = expresión;```
+
 **Operadores Aritméticos**
 
-* \+ - * /% (función módulo)	
-* ++ operador incremento	```i++;``` equivale a ```i = i + 1;``
-* -- operador decremento	
+* \+ - * /% (función módulo)
+* \++ operador incremento ```i++;``` equivale a ```i = i + 1;```
+* \-- operador decremento
 
 **Operadores Relacionales**
 
-* > >= < <=	
-* == (igual)
-* != (distinto)	
+* \> >= < <=
+* \== (igual)
+* \!= (distinto)
 
 **Operadores Lógicos**
 
-* && (Y lógica)	
-* || (O lógica)	
-* ! (negación)	
+* && (Y lógica)
+* || (O lógica)
+* ! (negación)
 
 
 ####3.3.-Instrucción condicional if
@@ -320,18 +330,17 @@ bool EsPar(int valor) {
 ```
 
 ####3.4.-Instrucción condicional switch
-```
-switch ( variable ) {
-	case constante1:
-		secuencia de instrucciones
-		break;	
-	case constante2:	
-		secuencia de instrucciones	
-		break;	
-	default:	
-		secuencia de instrucciones	
-}
-```
+
+_switch ( variable ) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case constante1:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secuencia de instrucciones
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case constante2:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secuencia de instrucciones
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secuencia de instrucciones
+}_
 
 **Ejemplo:**
 ```cpp
@@ -356,22 +365,23 @@ _while (condición) instrucción;_
 **Ejemplo:**
 
 ```cpp
-while ((c != a[i]) && (i < 20)) {_
-	 i++;	
+while ((c != a[i]) && (i < 20)) {
+	 i++;
 
 }
 ```
+
 #### Instrucción iterativa do/while
 
-_do {_
-	_secuencia de instrucciones;_
-_} while (condicion);_
+_do {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secuencia de instrucciones;
+} while (condicion);_
 
 **Ejemplo:**
 ```cpp
 do {
-	 presentar_datos(a[i]);	
-	 i++;	
+	 presentar_datos(a[i]);
+	 i++;
 } while (i < 100);
 ```
 
@@ -387,11 +397,11 @@ Una estructura de datos en C++, como puede ser una matriz o un registro (struct)
 
 ####4.2.-Declaración de un puntero
 
-* La declaración de un puntero es prácticamente idéntica a la declaración de una variable del tipo al que va a apuntar el puntero, con la única diferencia de que detrás del tipo colocaremos el operador * indicará al compilador que lo que estamos declarando no es una variable de ese tipo sino un puntero. Detrás del tipo se coloca el operador *
+* La declaración de un puntero es prácticamente idéntica a la declaración de una variable del tipo al que va a apuntar el puntero, con la única diferencia de que detrás del tipo colocaremos el operador \** indicará al compilador que lo que estamos declarando no es una variable de ese tipo sino un puntero. Detrás del tipo se coloca el operador \**
 
 **Ejemplo**
 ```cpp
-int * PNumero_ // puntero a valor de tipo int
+int * PNumero // puntero a valor de tipo int
 ```
 
 * Al declarar un puntero, éste toma un valor inicial representado por la constante **NULL**, indicando que el puntero no tiene actualmente dirección alguna, o lo que es lo mismo, que no apunta a ningún objeto. Este valor es asignado a todo puntero que no se declara de forma local, por ejemplo, en el interior de una función, en cuyo caso puede tomar cualquier valor arbitrario.
@@ -407,15 +417,13 @@ La memoria del computador está dividida en celdillas de un byte a cada una de l
 * Podemos conocer la dirección de una variable anteponiendo el operador **&** al nombre de la variables.
 ```cpp
 int Numero = 10;
-int* PNumero = &Numero;	
+int* PNumero = &Numero;
 ```
 
 ####4.4.- Referencia al valor de un puntero
 
 La finalidad principal de un puntero es, obviamente, permitirnos manipular la información almacenada en la dirección a la que apunta.
-* Para acceder a los datos contenidos en la dirección de memoria apun-
-tado por un puntero se antepone el operador * (operador de indirección)
-al identificador del puntero.
+* Para acceder a los datos contenidos en la dirección de memoria apuntado por un puntero se antepone el operador * (operador de indirección) al identificador del puntero.
 
 **Ejemplo:**
 ```cpp
@@ -428,11 +436,8 @@ al identificador del puntero.
 	cout << "Numero=" << Numero << endl;	
 ```
 
-* Si usamos el operador de indirección con un puntero que no contiene
-una dirección, sino NULL, se producirá una excepción (error) que
-causará la parada del programa.
-* Podemos acceder a los miembros de una estructura apuntada por un
-puntero mediante el operador −>
+* Si usamos el operador de indirección con un puntero que no contiene una dirección, sino NULL, se producirá una excepción (error) que causará la parada del programa.
+* Podemos acceder a los miembros de una estructura apuntada por un puntero mediante el operador −>
 
 **Ejemplo**
 ```cpp
