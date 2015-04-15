@@ -1,4 +1,4 @@
-PROGRAM=Cuestion2_4
+PROGRAM=Cuestion2_5
 
 # Declaration of variables
 CC = g++
