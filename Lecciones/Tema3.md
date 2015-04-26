@@ -318,7 +318,7 @@ Recordemos que en las clases que no son de plantilla se comparte una copia de de
 
 ####4.1.- Clases Contenedor e Iteradores
 
-Entre los tipo más populares de clases se encuentran las contenedor, también llamadas clases de colección. Se trata de clases diseñadas para contener colecciones de objetos. Suelen proporcionar servicios como la inserción, borrado, búsqueda, clasificación, etc. Los arrays y las listas enlazadas son ejemplos de este tipo de clases.Es común asociar objetos iteradores con una clase de colección.
+Entre los tipos más populares de clases se encuentran las contenedor, también llamadas clases de colección. Se trata de clases diseñadas para contener colecciones de objetos. Suelen proporcionar servicios como la inserción, borrado, búsqueda, clasificación, etc. Los arrays y las listas enlazadas son ejemplos de este tipo de clases. Es común asociar objetos iteradores con una clase de colección.
 
 Un iterador es un objeto que permite recorrer los elementos de una colección. Cuando se escribe un iterador para una clase, obtener el siguiente elemento de la clase puede expresarse de forma simple. Los iterados se escriben como amigos de las clases a través de las cuales hacen la iteración. Una clase contenedor puede tener varios iteradores operando sobre ella simultáneamente. Hay estructuras de datos muy comunes, como listas, pilas, colas y colas de prioridad. Por ello, hay una gran motivación para desarrollar una biblioteca estándar de contenedores de objetos organizados en plantillas. Esto es lo que se ha hecho con la biblioteca estándar de plantillas STL (Standard Template Library). El uso de la STL puede ahorrar considerable tiempo y esfuerzo y da como resultado programas de más calidad. En la **STL** de C\+\+ accedemos a los elementos de contenedores por medio de objetos iteradores que tiene la apariencia de punteros, pero que se comportan más inteligentemente. Las clases iteradores están diseñadas para que se utilicen genéricamente en cualquier contenedor. Los contenedores encapsulan algunas operaciones primitivas, pero los algoritmos de la STL están implementados de forma independiente de los contenedores. La STL evita el uso de **new** y **delete** en favor de asignadores para la asignación y liberación de almacenamiento. Cada contenedor de la STL tiene funciones miembro asociadas. Algunas funciones se aplican a todos los contenedores de STL. Otras son específicas de contenedores particulares. Mediante las plantillas de clase **vector**, **list** y **deque** podemos ilustrar la mayoría de las funciones más comunes.
 
@@ -359,66 +359,53 @@ El elemento de más alta prioridad siempre es el primer elemento en salir.
 
 #####Funciones comunes a todos los contenedores son las siguientes:
 
-Constructor predeterminado
-es un constructor para proporcionar una inicialización predeterminada del 
-contenedor. Normalmente, cada contenedor tiene varios constructores que 
-proporcionan una variedad de métodos de inicialización para dicho contenedor.
+* **Constructor predeterminado**
+es un constructor para proporcionar una inicialización predeterminada del contenedor. Normalmente, cada contenedor tiene varios constructores que proporcionan una variedad de métodos de inicialización para dicho contenedor.
 
-Constructor por copia
-Es un constructor que inicializa al contenedor para que sea una copia de un 
-contenedor existente del mismo tipo.
+* **Constructor por copia**
+Es un constructor que inicializa al contenedor para que sea una copia de un contenedor existente del mismo tipo.
 
-Destructor
+* Destructor
 Es la función para destruir el contenedor cuando ya no es necesario.
 
-empty devuelve true si no hay elementos en el contenedor. false eoc.
-max_size Devuelve la cantidad máxima de elementos de un contenedor.
-size Devuelve la cantidad de elementos que hay actualmente en el contenedor.
-operator= Asigna un contenedor a otro.
-operator< Devuelve true si el primer contenedor es menor que el segundo.
-operator<=
-operator>
-operator>=
-operator==
-operator!=
-swap Intercambia los elementos de dos contenedores
+* **empty** devuelve true si no hay elementos en el contenedor. false eoc.
+* **max_size** Devuelve la cantidad máxima de elementos de un contenedor.
+* **size** Devuelve la cantidad de elementos que hay actualmente en el contenedor.
+* **operator =** Asigna un contenedor a otro.
+* **operator <** Devuelve true si el primer contenedor es menor que el segundo.
+* **operator <=**
+* **operator >**
+* **operator >=**
+* **operator ==**
+* **operator !=**
+* **swap** Intercambia los elementos de dos contenedores
 
-Otras funciones solo se encuentran en los contenedores de primera clase, es decir, 
-los secuenciales y los asociativos:
-begin 
-Las dos versiones de esta función devuelven un iterator o un const_iterator 
-que hace referencia al primer elemento del contenedor.
-end 
-Las dos versiones de esta función devuelven un iterator o un const_iterator que 
-hace referencia a la siguiente posición después del final de un contenedor.
-rbegin 
-Las dos versiones de esta función devuelven un reverse_iterator o un 
-const_reverse_iterator que hace referencia al último elemento del contenedor.
-rend 
-Las dos versiones de esta función devuelven un reverse_iterator o un 
-const_reverse_iterator que hace referencia a la posición que está antes del primer 
-elemento del contenedor.
-erase 
+Otras funciones solo se encuentran en los contenedores de primera clase, es decir, los secuenciales y los asociativos:
+
+* **begin**
+Las dos versiones de esta función devuelven un iterator o un const_iterator que hace referencia al primer elemento del contenedor.
+* **end**
+Las dos versiones de esta función devuelven un iterator o un const_iterator que hace referencia a la siguiente posición después del final de un contenedor.
+* **rbegin**
+Las dos versiones de esta función devuelven un reverse_iterator o un const_reverse_iterator que hace referencia al último elemento del contenedor.
+* **rend**
+Las dos versiones de esta función devuelven un reverse_iterator o un const_reverse_iterator que hace referencia a la posición que está antes del primer elemento del contenedor.
+* **erase**
 Borra uno o más elementos del contenedor.
-clear 
+* **clear**
 Borra todos los elementos del contenedor.
 
-Los archivos de encabezado para cada uno de los contenedores de la biblioteca
-estándar son los siguientes:
-< vector >
-< list >
-< deque >
-< stack >
-< map >
-< set >
-< bitset >
+Los **archivos de encabezado** para cada uno de los contenedores de la biblioteca estándar son los siguientes:
+**< vector >**
+**< list >**
+**< deque >**
+**< stack >**
+**< map >**
+**< set >**
+**< bitset >**
 
-El contenido de todos estos archivos está en el namespace std. Sin embargo
-hay compiladores en los que estos archivos de encabezado difieren.
-Consideremos a continuación los typedef más comunes (para crear sinónimos o alias
-para tipos) que se encuentran en los contenedores de primera clase. Se utilizan en 
-las declaraciones genéricas de variables, parámetros de función y valores de 
-devolución de funciones. Por ejemplo,
+El contenido de todos estos archivos está en el **namespace std**. Sin embargo hay compiladores en los que estos archivos de encabezado difieren.
+Consideremos a continuación los **typedef** más comunes (para crear sinónimos o alias para tipos) que se encuentran en los contenedores de primera clase. Se utilizan en las declaraciones genéricas de variables, parámetros de función y valores de devolución de funciones. Por ejemplo,
 
 value_type 
 es el tipo del elemento que está almacenado en el contenedor.
